@@ -41,7 +41,7 @@ public class FoodController {
 	public List<Items> getAllItems() {
 		return service.getAllItems();
 	}
-	
+	@GetMapping("/item/{id}")
 	public Items getItemsById(@PathVariable int id) {
 		return service.getItemsById(id);
 	}

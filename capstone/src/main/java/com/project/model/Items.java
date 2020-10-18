@@ -14,10 +14,18 @@ public class Items {
 	private int id;
 	private String name;
 	private int price;
-	private String description;
+	private String cuisine;
 	
 	public Items() {
 		super();
+	}
+
+	public Items(int id, String name, int price, String cuisine) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.cuisine = cuisine;
 	}
 
 	public int getId() {
@@ -44,29 +52,25 @@ public class Items {
 		this.price = price;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getCuisine() {
+		return cuisine;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setCuisine(String cuisine) {
+		this.cuisine = cuisine;
 	}
 
 	@Override
 	public String toString() {
-		return "Items [id=" + id + ", name=" + name + ", price=" + price + ", description=" + description + "]";
+		return "Items [id=" + id + ", name=" + name + ", price=" + price + ", cuisine=" + cuisine + "]";
 	}
 
-	public Items(int id, String name, int price, String description) {
+	public Items(String name, int price, String cuisine) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.price = price;
-		this.description = description;
+		this.cuisine = cuisine;
 	}
-	
-	
-	
 	
 	
 }
